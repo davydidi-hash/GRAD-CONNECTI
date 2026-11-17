@@ -1,0 +1,403 @@
+/* Grad Connect Uganda — shared external stylesheet.
+   1 Tokens | 2 Base | 3 Header | 4 Layout | 5 Buttons | 6 Hero
+   7 Cards | 8 Forms | 9 Lists and tables | 10 Footer | 11 Responsive. */
+
+/* 1. Colour tokens — one place to change the whole palette. */
+:root {
+  --maroon: #7b1e2d;
+  --maroon-dark: #5a1420;
+  --maroon-light: #a8384a;
+  --gold: #d8ab5c;
+  --dark: #1e1518;
+  --ink: #2a2225;
+  --muted: #6b5e61;
+  --cream: #fbf7f7;
+  --pale: #f4ecee;
+  --border: #e6d8db;
+  --white: #ffffff;
+  --green: #276b43;
+  --focus: #b0620f;
+}
+
+/* 2. Base and typography — readable defaults for all pages. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Calibri, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--cream);
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--maroon); }
+a:hover { color: var(--maroon-dark); }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; color: var(--maroon-dark); line-height: 1.2; }
+h1 { font-size: 2.4rem; margin: 0 0 12px; }
+h2 { font-size: 1.6rem; margin: 0 0 18px; }
+h3 { font-size: 1.1rem; margin: 0 0 8px; color: var(--maroon-dark); }
+p { margin: 0 0 12px; }
+.lead { font-size: 1.12rem; color: var(--muted); max-width: 62ch; }
+.meta { color: var(--muted); font-size: 0.88rem; }
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--maroon);
+  margin: 0 0 8px;
+}
+.reference { font-weight: 700; color: var(--maroon); }
+.file-hint { font-size: 0.82rem; color: var(--muted); margin: 4px 0 0; }
+
+/* Text for screen readers and the keyboard skip link. */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--maroon); color: var(--white);
+  padding: 12px 16px; z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* 3. Header and navigation — dark sticky bar with the university wordmark. */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--dark);
+  border-bottom: 3px solid var(--maroon);
+}
+.header-inner {
+  max-width: 1080px; margin: 0 auto;
+  padding: 10px 20px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 44px; color: var(--white);
+  text-decoration: none; font-size: 1.05rem;
+}
+.brand:hover { color: var(--white); }
+.brand-icon { width: 36px; height: 36px; border-radius: 8px; }
+.primary-nav { margin-left: 0; }
+.primary-nav ul,
+.footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; }
+.primary-nav a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding: 8px 11px; border-radius: 6px;
+  color: #f3e9ea; text-decoration: none;
+  font-weight: 600; font-size: 0.92rem;
+}
+.primary-nav a:hover { background: rgba(255,255,255,0.12); color: var(--white); }
+.primary-nav a[aria-current="page"] { background: var(--maroon); color: var(--white); }
+/* The transparent VU wordmark sits at the right end of the header. */
+.header-vu { margin-left: auto; display: inline-flex; align-items: center; }
+.header-vu img { width: 112px; height: auto; }
+
+/* 4. Page layout — one centred column for every page. */
+.page-grid { max-width: 1080px; margin: 0 auto; padding: 28px 20px 56px; min-width: 0; }
+main:focus { outline: none; }
+.breadcrumb { font-size: 0.88rem; color: var(--muted); margin: 0 0 24px; }
+.breadcrumb a { color: var(--muted); }
+.section { margin: 44px 0; }
+.section-more { margin-top: 20px; }
+.page-head { padding: 8px 0 26px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
+
+/* 5. Buttons — shared style for links and visual-only form buttons. */
+.btn, button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; padding: 10px 18px;
+  border: 1px solid var(--maroon); border-radius: 8px;
+  background: var(--maroon); color: var(--white);
+  font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.btn:hover, button:hover { background: var(--maroon-dark); color: var(--white); transform: translateY(-1px); }
+.btn.secondary { background: var(--white); color: var(--maroon); }
+.btn.secondary:hover { background: var(--pale); color: var(--maroon-dark); }
+.btn.ghost { background: transparent; border-color: rgba(255,255,255,0.7); color: var(--white); }
+.btn.ghost:hover { background: rgba(255,255,255,0.14); color: var(--white); }
+.shortcuts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.back-link { display: inline-block; margin-top: 14px; font-weight: 700; }
+
+/* 6. Hero — six CSS-only slides, each with its own image and caption. */
+.hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  border-radius: 16px; background: var(--dark);
+  min-height: 480px; padding: 36px;
+}
+.hero-slides { position: absolute; inset: 0; z-index: 0; }
+.hero-slide {
+  position: absolute; inset: 0; margin: 0;
+  opacity: 0; visibility: hidden;
+  animation: heroSlide 36s linear infinite both;
+}
+.hero-slide img {
+  position: absolute; inset: 0; z-index: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transform: scale(1.02);
+}
+.hero-slide::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg,
+    rgba(24,14,17,0.94), rgba(58,20,30,0.82) 48%, rgba(24,14,17,0.35));
+}
+/* Negative delays place each slide at a different point in the same cycle. */
+.hero-slide:nth-child(1) { animation-delay: 0s; }
+.hero-slide:nth-child(2) { animation-delay: -30s; }
+.hero-slide:nth-child(3) { animation-delay: -24s; }
+.hero-slide:nth-child(4) { animation-delay: -18s; }
+.hero-slide:nth-child(5) { animation-delay: -12s; }
+.hero-slide:nth-child(6) { animation-delay: -6s; }
+@keyframes heroSlide {
+  0%, 15%   { opacity: 1; visibility: visible; }
+  17%, 100% { opacity: 0; visibility: hidden; }
+}
+.hero-copy { position: absolute; z-index: 2; }
+.hero-actions { position: absolute; z-index: 3; }
+.hero-copy {
+  left: 36px; top: 36px; max-width: 620px;
+  padding: 28px 32px;
+  background: rgba(24,14,17,0.80);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  color: var(--white);
+}
+.hero h2 { color: var(--white); font-size: 2.4rem; margin: 0 0 14px; }
+.hero .lead { color: #e8dcde; }
+.hero-eyebrow { color: var(--gold); }
+.hero-actions { left: 36px; bottom: 36px; display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* 7. Cards and panels — hover feedback, images and native details expansion. */
+.card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.job-list { display: grid; gap: 14px; }
+.job-card {
+  display: block; position: relative; overflow: hidden;
+  background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+  padding: 0; text-decoration: none; color: var(--ink);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.job-card:hover,
+.job-card:focus-visible,
+.job-card[open] { border-color: var(--maroon); box-shadow: 0 12px 28px rgba(90,20,32,0.13); }
+a.job-card:hover, a.job-card:focus-visible { transform: translateY(-4px); }
+.job-card:hover h3 { color: var(--maroon); }
+.job-card h3 { margin: 0 0 8px; }
+.job-card p { margin: 0 0 8px; }
+.job-thumb { width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid var(--border); }
+.job-summary { display: block; padding: 18px 20px 0; }
+.summary-title { display: block; margin: 0 0 8px; font-family: Georgia, serif; font-size: 1.18rem; font-weight: 700; color: var(--ink); }
+.job-card:hover .summary-title { color: var(--maroon); }
+.job-summary .meta { display: block; margin: 0 0 8px; }
+.job-body { border-top: 1px solid var(--border); margin-top: 16px; padding: 16px 20px 20px; }
+.home-card .job-summary { padding-bottom: 20px; }
+.card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.tag {
+  display: inline-block; padding: 4px 11px; border-radius: 999px;
+  background: var(--pale); color: var(--maroon);
+  font-size: 0.75rem; font-weight: 700;
+}
+.live {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--green); font-size: 0.74rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2.4s ease-out infinite; }
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(39,107,67,0.55); }
+  70%  { box-shadow: 0 0 0 9px rgba(39,107,67,0); }
+  100% { box-shadow: 0 0 0 0 rgba(39,107,67,0); }
+}
+.card-link { display: inline-block; margin-top: 6px; color: var(--maroon); font-weight: 700; }
+.card-link span { display: inline-block; transition: transform 0.18s ease; }
+.job-card:hover .card-link span { transform: translateX(4px); }
+.job-card summary { cursor: pointer; list-style: none; padding-right: 34px; }
+.job-card summary::marker { content: ""; }
+.job-card summary::after {
+  content: "+"; position: absolute; right: 20px; top: 18px;
+  width: 26px; height: 26px; line-height: 26px; text-align: center;
+  border-radius: 6px; background: var(--pale); color: var(--maroon); font-weight: 700;
+}
+.job-card[open] summary::after { content: "\2212"; }
+.job-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 0; }
+.info-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-top: 3px solid var(--maroon); border-radius: 12px; padding: 20px;
+}
+.info-card h3 { margin: 0 0 8px; }
+
+/* 8. Forms — labelled visual-only fields, no action, method or submit. */
+.panel,
+.form-panel { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+.panel h2 { margin-top: 0; }
+.panel h3 { margin-top: 20px; }
+.form-panel { margin: 0 0 22px; }
+.form-panel label { display: block; font-weight: 600; margin: 14px 0 5px; }
+.form-panel label:first-child { margin-top: 0; }
+/* Shared styling for text fields, file fields, selects and message boxes. */
+.text-input, select, textarea {
+  width: 100%; min-height: 44px; padding: 10px 12px;
+  border: 1px solid var(--border); border-radius: 8px;
+  font: inherit; background: var(--white); color: var(--ink);
+}
+textarea { min-height: 110px; resize: vertical; }
+input[type="file"] { padding: 9px 12px; }
+.text-input:focus, select:focus, textarea:focus { border-color: var(--maroon); }
+.text-input[readonly] { background: var(--cream); color: var(--muted); }
+.checkbox-label { display: flex; align-items: center; gap: 10px; font-weight: 600; margin: 16px 0; }
+.checkbox-label input { width: auto; min-height: 0; }
+.form-actions { margin: 18px 0 0; }
+.search-panel {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px; margin-bottom: 28px;
+}
+.search-panel label { flex: 1 1 100%; font-weight: 600; margin: 0; }
+.search-panel .text-input { flex: 1 1 260px; width: auto; }
+
+/* Radio, checkbox and select groups show a variety of HTML controls. */
+.choice-group { border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 0 0 16px; }
+.choice-group legend { font-weight: 700; padding: 0 6px; }
+.choice-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.choice-option {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--white); font-weight: 600;
+}
+.choice-option input { width: auto; min-height: 0; }
+.checkbox-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+
+/* CSS-only Login / Create account switch. */
+.mode-tabs {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px; border: 0; padding: 0; margin: 0;
+}
+.mode-input { position: absolute; width: 1px; height: 1px; opacity: 0; margin: 0; }
+.mode-input + label {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; padding: 10px 16px;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: var(--white); color: var(--maroon);
+  font-weight: 700; cursor: pointer;
+}
+.mode-input:checked + label { background: var(--maroon); border-color: var(--maroon); color: var(--white); }
+.mode-input:focus-visible + label { outline: 3px solid var(--focus); outline-offset: 2px; }
+.mode-panel { display: none; grid-column: 1 / -1; }
+.mode-panel h2 { margin-top: 0; }
+.mode-panel .form-panel { margin: 0; }
+#mode-login:checked ~ .login-panel { display: block; }
+#mode-create:checked ~ .create-panel { display: block; }
+
+/* 9. Lists, tables, sitemap, sources and fragment-driven detail blocks. */
+.chart-img { width: 100%; border: 1px solid var(--border); border-radius: 12px; background: var(--white); }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 28px; align-items: center; }
+.page-list { padding-left: 22px; columns: 2; column-gap: 32px; }
+.page-list li { margin-bottom: 8px; break-inside: avoid; }
+ol.sources { padding-left: 22px; }
+ol.sources li { margin-bottom: 10px; overflow-wrap: break-word; font-size: 0.9rem; }
+.table-wrap { overflow-x: auto; }
+.table-wrap:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.data-table { width: 100%; border-collapse: collapse; background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.data-table caption { text-align: left; font-weight: 700; padding: 12px 14px; color: var(--maroon-dark); }
+.data-table th, .data-table td { border-bottom: 1px solid var(--border); padding: 10px 12px; text-align: left; font-size: 0.9rem; }
+.data-table th { background: var(--pale); color: var(--maroon-dark); }
+.data-table tr:last-child td { border-bottom: 0; }
+.detail-case,
+.application-case { display: none; scroll-margin-top: 120px; }
+.detail-case:target,
+.application-case:target { display: block; }
+.detail-case.default,
+.application-case.default { display: block; }
+.detail-case:target ~ .detail-case.default,
+.application-case:target ~ .application-case.default { display: none; }
+.case-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 24px; align-items: start; }
+.case-img { width: 100%; border-radius: 12px; border: 1px solid var(--border); }
+.case-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }
+.case-list { padding-left: 22px; }
+.case-list li { margin-bottom: 8px; }
+.faq { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+.faq summary { cursor: pointer; font-weight: 700; color: var(--maroon-dark); }
+.faq p { margin: 12px 0 0; }
+
+/* 10. Footer — quick links, social handles and copyright. */
+.footer { background: var(--dark); color: #e8dcde; padding: 40px 20px 92px; border-top: 3px solid var(--maroon); }
+.footer-inner { max-width: 1080px; margin: 0 auto; }
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-brand img { width: 40px; height: 40px; border-radius: 9px; }
+.footer-title { color: var(--white); font-weight: 700; font-size: 1.05rem; margin: 0; }
+.footer-tagline { color: #c9b9bd; font-size: 0.88rem; margin: 2px 0 0; }
+.footer-columns { margin-top: 22px; }
+.footer-heading { color: var(--white); font-family: Calibri, Arial, sans-serif; font-size: 0.95rem; margin: 0 0 8px; }
+.footer-links { gap: 2px 6px; }
+.footer-links a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding: 6px 10px; border-radius: 6px;
+  color: #e8dcde; text-decoration: none; font-size: 0.9rem; font-weight: 600;
+}
+.footer-links a:hover { background: rgba(255,255,255,0.1); color: var(--white); }
+.social { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; padding: 0; }
+.social li {
+  display: inline-flex; align-items: center; gap: 9px; min-height: 44px;
+  padding: 8px 14px; border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px; background: rgba(255,255,255,0.06); font-size: 0.86rem;
+}
+.social img { width: 20px; height: 20px; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.14);
+  margin-top: 26px; padding-top: 18px;
+}
+/* Copyright and Group Three sit on their own line. */
+.copyright { margin: 0; font-size: 0.82rem; color: #c9b9bd; }
+
+/* 11. Responsive layout, mobile quick links and reduced motion. */
+.bottom-bar { display: none; }
+
+/* On narrow screens: single-column cards, 3-wide nav and bottom bar. */
+@media (max-width: 820px) {
+  .page-grid { padding-bottom: 96px; }
+  .card-grid, .grid-2, .split, .case-grid, .footer-columns { grid-template-columns: 1fr; }
+  .checkbox-grid { grid-template-columns: 1fr; }
+  .page-list { columns: 1; }
+  .primary-nav { width: 100%; }
+  .primary-nav ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .primary-nav a { width: 100%; justify-content: center; padding: 8px 4px; font-size: 0.82rem; text-align: center; }
+  .header-vu img { width: 96px; }
+  .hero { min-height: 560px; padding: 18px; }
+  .hero-copy { left: 18px; right: 18px; top: 18px; max-width: none; padding: 20px; }
+  .hero h2 { font-size: 1.55rem; }
+  .hero-actions { left: 18px; right: 18px; bottom: 18px; }
+  .hero-actions .btn { flex: 1 1 auto; justify-content: center; }
+  .job-thumb { height: 150px; }
+  .footer { padding-bottom: 100px; }
+  .bottom-bar {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--dark); border-top: 2px solid var(--maroon); z-index: 30;
+  }
+  .bottom-bar a {
+    min-height: 50px; display: flex; align-items: center; justify-content: center;
+    color: #f3e9ea; font-weight: 700; font-size: 0.82rem; text-decoration: none;
+    border-right: 1px solid rgba(255,255,255,0.12);
+  }
+  .bottom-bar a:last-child { border-right: 0; }
+}
+
+/* Respect the user’s reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-slide { animation: none; opacity: 0; visibility: hidden; }
+  .hero-slide:first-child { opacity: 1; visibility: visible; }
+  .hero-slide img { transform: none; }
+  .dot { animation: none; }
+  .btn, button, .job-card, .card-link span { transition: none; }
+}

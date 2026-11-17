@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Metadata and the single shared stylesheet -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Login or create a Grad Connect Uganda account using a CSS-only switch.">
+  <meta name="theme-color" content="#1e1518">
+  <title>Login / Create Account | Grad Connect Uganda</title>
+  <link rel="icon" type="image/svg+xml" href="assets/grad-connect-icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Site header: brand, seven-link menu and transparent university wordmark -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-icon" src="assets/grad-connect-icon.svg" alt="">
+        <span>Grad Connect <strong>Uganda</strong></span>
+      </a>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="graduate.html">Graduate</a></li>
+          <li><a href="employer.html">Employer</a></li>
+          <li><a href="career-help.html">Career Help</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="header-vu">
+        <img src="assets/vu_logo_header.png" alt="Victoria University Uganda">
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content: breadcrumb followed by the page block -->
+  <main id="main" tabindex="-1" class="page-grid">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &rsaquo; Login</nav>
+    <!-- Login: CSS-only switch between Login and Create account forms. -->
+    <!-- Page introduction -->
+    <div class="page-head">
+      <p class="eyebrow">Accounts</p>
+      <h1>Account access</h1>
+      <p class="lead">Choose Login or Create account to change the form shown below.</p>
+    </div>
+
+    <!-- Account mode switch: radio inputs control the visible panel -->
+        <!-- Radio inputs drive the two account modes -->
+        <fieldset class="mode-tabs">
+          <legend class="sr-only">Choose login or create account</legend>
+          <input class="mode-input" type="radio" name="account-mode" id="mode-login" checked>
+          <label for="mode-login">Login</label>
+          <input class="mode-input" type="radio" name="account-mode" id="mode-create">
+          <label for="mode-create">Create account</label>
+          <div class="mode-panel login-panel">
+            <h2>Login</h2>
+            <!-- Form fields -->
+            <form class="form-panel">
+              <label for="login-email">Email address</label>
+              <input class="text-input" id="login-email" name="login-email" type="email" required placeholder="name@domain.com" autocomplete="email">
+              <label for="login-password">Password</label>
+              <input class="text-input" id="login-password" name="login-password" type="password" required autocomplete="current-password">
+              <label class="checkbox-label" for="login-remember">
+                <input id="login-remember" name="login-remember" type="checkbox" required>
+                Keep me signed in on this device
+              </label>
+              <p class="form-actions"><button type="button">Login</button></p>
+            </form>
+          </div>
+          <div class="mode-panel create-panel">
+            <h2>Create account</h2>
+            <!-- Form fields -->
+            <form class="form-panel">
+              <label for="create-name">Full name</label>
+              <input class="text-input" id="create-name" name="create-name" type="text" required placeholder="Name" autocomplete="name">
+              <label for="create-email">Email address</label>
+              <input class="text-input" id="create-email" name="create-email" type="email" required placeholder="name@domain.com" autocomplete="email">
+              <label for="create-type">Account type</label>
+              <select class="text-input" id="create-type" name="create-type" required>
+                <option value="">Choose an account type</option>
+                <option value="graduate">Graduate</option>
+                <option value="employer">Employer</option>
+              </select>
+              <label for="create-password">Password</label>
+              <input class="text-input" id="create-password" name="create-password" type="password" required autocomplete="new-password">
+              <label class="checkbox-label" for="create-consent">
+                <input id="create-consent" name="create-consent" type="checkbox" required>
+                I agree to the privacy and policy.
+              </label>
+              <p class="form-actions"><button type="button">Create account</button></p>
+            </form>
+          </div>
+        </fieldset>
+
+    <p class="shortcuts">
+      <a class="btn secondary" href="privacy.html">Privacy and policy</a>
+      <a class="btn secondary" href="career-help.html#faq">Common questions</a>
+    </p>
+  </main>
+
+  <!-- Footer: brand, quick links, social handles and copyright -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/grad-connect-icon.svg" alt="">
+        <div>
+          <p class="footer-title">Grad Connect Uganda</p>
+          <p class="footer-tagline">Graduate opportunities, guidance and evidence.</p>
+        </div>
+      </div>
+
+      <div class="footer-columns">
+        <nav aria-label="Quick links">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="graduate.html">Graduate</a></li>
+          <li><a href="employer.html">Employer</a></li>
+          <li><a href="career-help.html">Career Help</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="login.html">Login / Create account</a></li>
+          <li><a href="privacy.html">Privacy / Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <ul class="social" aria-label="Social handles">
+          <li><img src="assets/social-x.svg" alt="X"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-instagram.svg" alt="Instagram"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-tiktok.svg" alt="TikTok"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-linkedin.svg" alt="LinkedIn"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-facebook.svg" alt="Facebook"><span>@grad_connect.ug</span></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Grad Connect Uganda | Group Three. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile quick links -->
+  <nav class="bottom-bar" aria-label="Mobile quick links">
+    <a href="index.html">Home</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="graduate.html">Graduate</a>
+    <a href="employer.html">Employer</a>
+  </nav>
+</body>
+</html>
+

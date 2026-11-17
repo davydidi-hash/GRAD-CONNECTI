@@ -1,0 +1,3 @@
+# Public crawler rules for the static site.
+User-agent: *
+Allow: /

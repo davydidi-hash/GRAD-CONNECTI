@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Metadata and the single shared stylesheet -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact enquiries and listing reports for Grad Connect Uganda.">
+  <meta name="theme-color" content="#1e1518">
+  <title>Contact Us | Grad Connect Uganda</title>
+  <link rel="icon" type="image/svg+xml" href="assets/grad-connect-icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Site header: brand, seven-link menu and transparent university wordmark -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-icon" src="assets/grad-connect-icon.svg" alt="">
+        <span>Grad Connect <strong>Uganda</strong></span>
+      </a>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="graduate.html">Graduate</a></li>
+          <li><a href="employer.html">Employer</a></li>
+          <li><a href="career-help.html">Career Help</a></li>
+          <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="header-vu">
+        <img src="assets/vu_logo_header.png" alt="Victoria University Uganda">
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content: breadcrumb followed by the page block -->
+  <main id="main" tabindex="-1" class="page-grid">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &rsaquo; Contact Us</nav>
+    <!-- Contact Us: enquiry form, subject list, report form and privacy link. -->
+    <!-- Page introduction -->
+    <div class="page-head">
+      <p class="eyebrow">General information</p>
+      <h1>Contact Us</h1>
+      <p class="lead">Use the enquiry form or send a report about a published listing.</p>
+    </div>
+
+    <!-- Contact and enquiry form -->
+    <section class="section" id="enquiry">
+      <h2>Enquiry</h2>
+        <!-- Form fields -->
+        <form class="form-panel">
+          <label for="contact-name">Name</label>
+          <input class="text-input" id="contact-name" name="contact-name" type="text" required placeholder="Name" autocomplete="name">
+          <label for="contact-email">Email address</label>
+          <input class="text-input" id="contact-email" name="contact-email" type="email" required placeholder="name@domain.com" autocomplete="email">
+          <label for="contact-subject">Subject</label>
+          <select class="text-input" id="contact-subject" name="contact-subject" required>
+            <option value="">Choose a subject</option>
+            <option value="opportunity">Opportunity question</option>
+            <option value="application">Application question</option>
+            <option value="account">Account question</option>
+            <option value="report">Report a listing</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="contact-message">Message</label>
+          <textarea class="text-input" id="contact-message" name="contact-message" required placeholder="Message"></textarea>
+          <label class="checkbox-label" for="contact-consent">
+            <input id="contact-consent" name="contact-consent" type="checkbox" required>
+            I agree to the privacy and policy.
+          </label>
+          <p class="form-actions"><button type="button">Continue</button></p>
+        </form>        <fieldset class="choice-group">
+          <legend>I am a</legend>
+          <div class="choice-row">
+            <label class="choice-option" for="contact-type-1">
+              <input id="contact-type-1" name="contact-type" type="radio" checked>
+              Graduate
+            </label>
+            <label class="choice-option" for="contact-type-2">
+              <input id="contact-type-2" name="contact-type" type="radio">
+              Employer
+            </label>
+            <label class="choice-option" for="contact-type-3">
+              <input id="contact-type-3" name="contact-type" type="radio">
+              Visitor
+            </label>
+          </div>
+        </fieldset>
+    </section>
+
+    <!-- Listing report form -->
+    <section class="section" id="report">
+      <h2>Report a listing</h2>
+        <!-- Form fields -->
+        <form class="form-panel">
+          <label for="contact-report-title">Listing title or link</label>
+          <input class="text-input" id="contact-report-title" name="contact-report-title" type="text" required placeholder="Listing title">
+          <label for="contact-report-topic">Report topic</label>
+          <select class="text-input" id="contact-report-topic" name="contact-report-topic" required>
+            <option value="">Choose a subject</option>
+            <option value="opportunity">Opportunity question</option>
+            <option value="application">Application question</option>
+            <option value="account">Account question</option>
+            <option value="report">Report a listing</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="contact-report-reason">Reason for report</label>
+          <textarea class="text-input" id="contact-report-reason" name="contact-report-reason" required placeholder="Reason"></textarea>
+          <p class="form-actions"><button type="button">Report listing</button></p>
+        </form>
+      <p class="shortcuts"><a class="btn secondary" href="privacy.html">Privacy and policy</a></p>
+    </section>
+  </main>
+
+  <!-- Footer: brand, quick links, social handles and copyright -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/grad-connect-icon.svg" alt="">
+        <div>
+          <p class="footer-title">Grad Connect Uganda</p>
+          <p class="footer-tagline">Graduate opportunities, guidance and evidence.</p>
+        </div>
+      </div>
+
+      <div class="footer-columns">
+        <nav aria-label="Quick links">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="graduate.html">Graduate</a></li>
+          <li><a href="employer.html">Employer</a></li>
+          <li><a href="career-help.html">Career Help</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="login.html">Login / Create account</a></li>
+          <li><a href="privacy.html">Privacy / Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <ul class="social" aria-label="Social handles">
+          <li><img src="assets/social-x.svg" alt="X"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-instagram.svg" alt="Instagram"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-tiktok.svg" alt="TikTok"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-linkedin.svg" alt="LinkedIn"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-facebook.svg" alt="Facebook"><span>@grad_connect.ug</span></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Grad Connect Uganda | Group Three. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile quick links -->
+  <nav class="bottom-bar" aria-label="Mobile quick links">
+    <a href="index.html">Home</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="graduate.html">Graduate</a>
+    <a href="employer.html">Employer</a>
+  </nav>
+</body>
+</html>
+

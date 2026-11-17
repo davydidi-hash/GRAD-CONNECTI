@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Metadata and the single shared stylesheet -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Post a vacancy, manage an organisation profile and review graduate applications.">
+  <meta name="theme-color" content="#1e1518">
+  <title>Employer | Grad Connect Uganda</title>
+  <link rel="icon" type="image/svg+xml" href="assets/grad-connect-icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Site header: brand, seven-link menu and transparent university wordmark -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-icon" src="assets/grad-connect-icon.svg" alt="">
+        <span>Grad Connect <strong>Uganda</strong></span>
+      </a>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="graduate.html">Graduate</a></li>
+          <li><a href="employer.html" aria-current="page">Employer</a></li>
+          <li><a href="career-help.html">Career Help</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="header-vu">
+        <img src="assets/vu_logo_header.png" alt="Victoria University Uganda">
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content: breadcrumb followed by the page block -->
+  <main id="main" tabindex="-1" class="page-grid">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &rsaquo; Employer</nav>
+    <!-- Employer: vacancy form, organisation profile, contacts and applications. -->
+    <!-- Page introduction -->
+    <div class="page-head">
+      <p class="eyebrow">Employer section</p>
+      <h1>Employer</h1>
+      <p class="lead">Post a vacancy, keep organisation contacts together and review applications.</p>
+    </div>
+
+    <!-- Vacancy form with a drop-down, radios, checkboxes and a file field -->
+    <section class="section" id="post-vacancy">
+      <p class="eyebrow">Recruitment</p>
+      <h2>Post a Vacancy</h2>
+        <!-- Form fields -->
+        <form class="form-panel">
+          <label for="vac-org">Organisation name</label>
+          <input class="text-input" id="vac-org" name="vac-org" type="text" required placeholder="Organisation">
+          <label for="vac-title">Job title</label>
+          <input class="text-input" id="vac-title" name="vac-title" type="text" required placeholder="Job title">
+          <label for="vac-field">Field</label>
+          <select class="text-input" id="vac-field" name="vac-field" required>
+            <option value="">Choose a field</option>
+            <option value="research">Research</option>
+            <option value="data">Data and ICT</option>
+            <option value="media">Media and Writing</option>
+            <option value="web">Web and IT</option>
+            <option value="fieldwork">Fieldwork and Surveys</option>
+            <option value="creative">Creative and Design</option>
+            <option value="science">Science and Laboratory</option>
+            <option value="finance">Finance and Accounts</option>
+            <option value="health">Health and Community</option>
+            <option value="agriculture">Agriculture and Environment</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="vac-type">Work type</label>
+          <select class="text-input" id="vac-type" name="vac-type" required>
+            <option value="">Choose a work type</option>
+            <option value="freelance">Freelance</option>
+            <option value="internship">Internship</option>
+            <option value="remote">Remote</option>
+            <option value="part">Part time</option>
+          </select>
+          <label for="vac-deadline">Closing date</label>
+          <input class="text-input" id="vac-deadline" name="vac-deadline" type="date" required>
+          <label for="vac-requirements">Requirements and deliverables</label>
+          <textarea class="text-input" id="vac-requirements" name="vac-requirements" required placeholder="Requirements"></textarea>
+          <label for="vac-logo">Organisation image</label>
+          <input class="text-input" id="vac-logo" name="vac-logo" type="file" required accept="image/*">
+          <label class="checkbox-label" for="vac-verify">
+            <input id="vac-verify" name="vac-verify" type="checkbox" required>
+            I confirm the details are accurate.
+          </label>
+          <p class="form-actions"><button type="button">Continue</button></p>
+        </form>        <fieldset class="choice-group">
+          <legend>Work arrangement</legend>
+          <div class="choice-row">
+            <label class="choice-option" for="vac-arrangement-1">
+              <input id="vac-arrangement-1" name="vac-arrangement" type="radio" checked>
+              Freelance
+            </label>
+            <label class="choice-option" for="vac-arrangement-2">
+              <input id="vac-arrangement-2" name="vac-arrangement" type="radio">
+              Internship
+            </label>
+            <label class="choice-option" for="vac-arrangement-3">
+              <input id="vac-arrangement-3" name="vac-arrangement" type="radio">
+              Remote
+            </label>
+            <label class="choice-option" for="vac-arrangement-4">
+              <input id="vac-arrangement-4" name="vac-arrangement" type="radio">
+              Part time
+            </label>
+          </div>
+        </fieldset>        <fieldset class="choice-group">
+          <legend>Application requirements</legend>
+          <div class="checkbox-grid">
+            <label class="choice-option" for="vac-checks-1">
+              <input id="vac-checks-1" name="vac-checks-1" type="checkbox">
+              CV or profile
+            </label>
+            <label class="choice-option" for="vac-checks-2">
+              <input id="vac-checks-2" name="vac-checks-2" type="checkbox">
+              Portfolio samples
+            </label>
+            <label class="choice-option" for="vac-checks-3">
+              <input id="vac-checks-3" name="vac-checks-3" type="checkbox">
+              Cover note
+            </label>
+            <label class="choice-option" for="vac-checks-4">
+              <input id="vac-checks-4" name="vac-checks-4" type="checkbox">
+              Consent to privacy policy
+            </label>
+          </div>
+        </fieldset>
+    </section>
+
+    <!-- Organisation profile and contacts -->
+    <section class="section" id="organisation">
+      <p class="eyebrow">Profile</p>
+      <h2>Organisation Profile</h2>
+        <!-- Form fields -->
+        <form class="form-panel">
+          <label for="org-name">Organisation name</label>
+          <input class="text-input" id="org-name" name="org-name" type="text" required placeholder="Organisation">
+          <label for="org-type">Organisation type</label>
+          <select class="text-input" id="org-type" name="org-type" required>
+            <option value="">Choose an organisation type</option>
+            <option value="company">Company</option>
+            <option value="ngo">Non-governmental organisation</option>
+            <option value="public">Public institution</option>
+            <option value="startup">Start-up</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="org-contact">Contact person</label>
+          <input class="text-input" id="org-contact" name="org-contact" type="text" required placeholder="Name" autocomplete="name">
+          <label for="org-email">Work email address</label>
+          <input class="text-input" id="org-email" name="org-email" type="email" required placeholder="name@domain.com" autocomplete="email">
+          <label for="org-phone">Telephone</label>
+          <input class="text-input" id="org-phone" name="org-phone" type="tel" required placeholder="Telephone">
+          <label for="org-address">Address and contact note</label>
+          <textarea class="text-input" id="org-address" name="org-address" required placeholder="Address"></textarea>
+          <label class="checkbox-label" for="org-consent">
+            <input id="org-consent" name="org-consent" type="checkbox" required>
+            I agree to the privacy and policy.
+          </label>
+          <p class="form-actions"><button type="button">Continue</button></p>
+        </form>
+    </section>
+
+    <!-- Applications received from graduates -->
+    <section class="section" id="applications">
+      <p class="eyebrow">Applications</p>
+      <h2>View Applications</h2>
+        <div class="table-wrap" role="region" aria-label="Applications from graduates" tabindex="0">
+          <table class="data-table">
+            <caption>Applications from graduates</caption>
+            <thead><tr><th scope="col">Application</th><th scope="col">Job reference</th><th scope="col">Opportunity</th><th scope="col">Candidate</th><th scope="col">Status</th><th scope="col">Shortlist</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>APP-201</td>
+            <td><a href="application.html#GCU-101">GCU-101</a></td>
+            <td>Community research assistant</td>
+            <td>Graduate profile 01</td>
+            <td>Under review</td>
+            <td><label class="sr-only" for="shortlist-1">Shortlist APP-201</label><input id="shortlist-1" name="shortlist-1" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>APP-202</td>
+            <td><a href="application.html#GCU-102">GCU-102</a></td>
+            <td>Data entry assistant</td>
+            <td>Graduate profile 02</td>
+            <td>Shortlisted</td>
+            <td><label class="sr-only" for="shortlist-2">Shortlist APP-202</label><input id="shortlist-2" name="shortlist-2" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>APP-203</td>
+            <td><a href="application.html#GCU-104">GCU-104</a></td>
+            <td>Junior web support helper</td>
+            <td>Graduate profile 03</td>
+            <td>Work samples requested</td>
+            <td><label class="sr-only" for="shortlist-3">Shortlist APP-203</label><input id="shortlist-3" name="shortlist-3" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>APP-204</td>
+            <td><a href="application.html#GCU-106">GCU-106</a></td>
+            <td>Graphic design helper</td>
+            <td>Graduate profile 04</td>
+            <td>New</td>
+            <td><label class="sr-only" for="shortlist-4">Shortlist APP-204</label><input id="shortlist-4" name="shortlist-4" type="checkbox"></td>
+          </tr>
+            </tbody>
+          </table>
+        </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <h2>Contact graduates</h2>
+        <!-- Form fields -->
+        <form class="form-panel">
+          <label for="emp-graduate">Candidate reference</label>
+          <input class="text-input" id="emp-graduate" name="emp-graduate" type="text" required placeholder="Candidate reference">
+          <label for="emp-subject">Subject</label>
+          <select class="text-input" id="emp-subject" name="emp-subject" required>
+            <option value="">Choose a subject</option>
+            <option value="opportunity">Opportunity question</option>
+            <option value="application">Application question</option>
+            <option value="account">Account question</option>
+            <option value="report">Report a listing</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="emp-message">Message</label>
+          <textarea class="text-input" id="emp-message" name="emp-message" required placeholder="Message"></textarea>
+          <label class="checkbox-label" for="emp-consent">
+            <input id="emp-consent" name="emp-consent" type="checkbox" required>
+            I agree to the privacy and policy.
+          </label>
+          <p class="form-actions"><button type="button">Continue</button></p>
+        </form>
+      <p class="shortcuts"><a class="btn secondary" href="privacy.html">Privacy and policy</a></p>
+    </section>
+  </main>
+
+  <!-- Footer: brand, quick links, social handles and copyright -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/grad-connect-icon.svg" alt="">
+        <div>
+          <p class="footer-title">Grad Connect Uganda</p>
+          <p class="footer-tagline">Graduate opportunities, guidance and evidence.</p>
+        </div>
+      </div>
+
+      <div class="footer-columns">
+        <nav aria-label="Quick links">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="graduate.html">Graduate</a></li>
+          <li><a href="employer.html">Employer</a></li>
+          <li><a href="career-help.html">Career Help</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="login.html">Login / Create account</a></li>
+          <li><a href="privacy.html">Privacy / Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <ul class="social" aria-label="Social handles">
+          <li><img src="assets/social-x.svg" alt="X"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-instagram.svg" alt="Instagram"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-tiktok.svg" alt="TikTok"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-linkedin.svg" alt="LinkedIn"><span>@grad_connect.ug</span></li>
+          <li><img src="assets/social-facebook.svg" alt="Facebook"><span>@grad_connect.ug</span></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Grad Connect Uganda | Group Three. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile quick links -->
+  <nav class="bottom-bar" aria-label="Mobile quick links">
+    <a href="index.html">Home</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="graduate.html">Graduate</a>
+    <a href="employer.html">Employer</a>
+  </nav>
+</body>
+</html>
+
