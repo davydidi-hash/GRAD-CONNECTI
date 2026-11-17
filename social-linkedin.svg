@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- LinkedIn social icon for the footer handle. -->
+  <rect x="2" y="2" width="20" height="20" rx="4" fill="#f3e9ea"/>
+  <circle cx="7.4" cy="7.6" r="1.5" fill="#7b1e2d"/>
+  <rect x="6.1" y="10.2" width="2.6" height="7.6" rx="1" fill="#7b1e2d"/>
+  <rect x="11" y="10.2" width="2.6" height="7.6" rx="1" fill="#7b1e2d"/>
+  <path d="M11 10.2h5.9c1.4 0 2.3 1 2.3 2.4v5.2h-2.6v-4.6c0-.9-.4-1.4-1.2-1.4s-1.5.6-1.5 1.6v4.4H11z" fill="#7b1e2d"/>
+</svg>

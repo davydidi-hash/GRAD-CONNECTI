@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- Instagram social icon for the footer handle. -->
+  <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#f3e9ea" stroke-width="2"/>
+  <circle cx="12" cy="12" r="4" fill="none" stroke="#f3e9ea" stroke-width="2"/>
+  <circle cx="17.3" cy="6.7" r="1.4" fill="#f3e9ea"/>
+</svg>
